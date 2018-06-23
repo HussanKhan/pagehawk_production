@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav>
+            <ul class="navlist">
+                <a href="/about" class="navitem">About</a>
+                <a href="/" class="navitem">Home</a>
+            </ul>
+        </nav>
+        <div class="searchouter">
+            <h1 class="logo">PageHawk.io</h1>
+            <p class="tagline">Webpage content analytics</p>
+            <div class="searchinputs">
+                <input class="searchbar" type="text" placeholder="Paste URL Here" data-bind="textInput: url, click: cleanbar">
+                <button class="submitbt" type="submit" name="button" data-bind="click: analyze, visible: showana">Analyze</button>
+                <button class="loading" data-bind="visible: loading">Analyzing...</button>
+            </div>
+            <div class="rcontainer">
+                <div class="info btop">
+                    <p class="catval" data-bind="text: word_count"></p>
+                    <p class="catname">Word Count</p>
+                </div>
+                <div class="info btop">
+                    <p class="catval" data-bind="text: sent_count"></p>
+                    <p class="catname">Sentence Count</p>
+                </div>
+                <div class="info btop">
+                    <p class="catval" data-bind="text: read_ease"></p>
+                    <p class="catname">Reading Ease</p>
+                </div>
+                <div class="info btop">
+                    <p class="catval" data-bind="text: read_time"></p>
+                    <p class="catname">Read Time</p>
+                </div>
+                <div class="info btop">
+                    <p class="catval" data-bind="text: load_time"></p>
+                    <p class="catname">Response Time</p>
+                </div>
+                <div class="info scrll">
+                    <ol class="catvalkw" data-bind="foreach: keywords">
+                        <li data-bind="text: word"></li>
+                    </ol>
+                    <p class="catname">Keyword Density (Greatest to Least)</p>
+                </div>
+                <div class="sideby">
+                 <div class="info scrll">
+                    <p class="catname">Summary</p>
+                    <p class="catval" data-bind="text: summary"></p>
+                </div>
+                <div class="info scrll">
+                    <p class="catname">Headings</p>
+                    <ul class="headingl" data-bind="foreach: headings">
+                        <li class="headitem" data-bind="text: heading"></li>
+                        <br>
+                    </ul>
+                </div>
+                </div>
+                <div class="info scrll">
+                    <p class="catname">URL:   <a href="" data-bind="text: checklink, attr: {href: checklink}"></a></p>
+                </div>
+                <div class="info scrll scrollneeded">
+                    <p class="catname">Outbound Links</p>
+                    <ul class="linklist" data-bind="foreach: olinks">
+                        <a href="" data-bind="text: link, attr: {href: link}"></a>
+                        <br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/knockout-3.4.2.js') }}"></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/app.js') }}"></script>
+</html>
