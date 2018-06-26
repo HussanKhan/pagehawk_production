@@ -1,3 +1,6 @@
+#!/usr/bin/python3.5
+import sys
+sys.path.insert(0,"/var/www/PageHawk/pagehawk")
 import nltk
 from nltk.corpus import stopwords
 from Stop_Word_Remover import RemoveStopWords

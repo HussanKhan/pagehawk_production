@@ -1,8 +1,11 @@
+#!/usr/bin/python3.5
+import sys
+sys.path.insert(0,"/var/www/PageHawk/pagehawk/")
+print(sys.path)
 from flask import Flask, jsonify, make_response, request, render_template
 from flask_cors import CORS
 from Lean_Parsev2 import LeanParse
 from Text_Anna import Text_Anna
-
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
@@ -62,4 +65,4 @@ def bad_request(error):
     return make_response(jsonify({"error": "Invalid Request"}, 400))
 if __name__ == '__main__':
     CORS(app)
-    app.run(host= "127.0.0.1", port=8080, debug=True)
+    app.run()

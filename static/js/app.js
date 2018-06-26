@@ -56,7 +56,7 @@ var ViewModel = function(){
             this.loading(true);
 
             $.ajax({
-                url: "http://127.0.0.1:8080/pagehawk?link=" + this.url(),
+                url: "https://pagehawk.io/pagehawk?link=" + this.url(),
                 dataType: 'json',
                 success: function (data) {
                     //UPDATING VIEW

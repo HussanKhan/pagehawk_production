@@ -1,3 +1,6 @@
+#!/usr/bin/python3.5
+import sys
+sys.path.insert(0,"/var/www/PageHawk/pagehawk/")
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
