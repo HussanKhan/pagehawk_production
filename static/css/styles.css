@@ -284,14 +284,17 @@ button {
     }
 
     .infosummary, .infohead {
+        margin: 0px;
         width: 94%;
         max-width: 100%;
-        margin: 1%;
+        margin-top: 4%;
     }
 
     .infoout, .infourl {
+        margin: 0px;
         width: 94%;
         max-width: 100%;
+        margin-top: 4%;
     }
 
 }
