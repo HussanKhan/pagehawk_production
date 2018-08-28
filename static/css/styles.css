@@ -298,18 +298,26 @@ button {
     }
 
     .infoout:hover {
+        margin-top: auto;
+        box-shadow: 0px 20px 25px 1px rgba(0, 0, 0, 0);
 
     }
 
     .infoout:hover {
+        margin-top: auto;
+        box-shadow: 0px 20px 25px 1px rgba(0, 0, 0, 0);
 
     }
 
     .infosummary:hover {
+        margin-top: auto;
+        box-shadow: 0px 20px 25px 1px rgba(0, 0, 0, 0);
 
     }
 
     .infohead:hover {
+        margin-top: auto;
+        box-shadow: 0px 20px 25px 1px rgba(0, 0, 0, 0);
 
     }
 
