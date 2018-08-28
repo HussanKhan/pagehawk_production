@@ -264,10 +264,12 @@ button {
     }
 
     .info {
-        height: 50px;
-        width: 150px;
+        height: 40px;
+        width: 120px;
         margin: 1%;
         padding: 20px;
+        padding-top: 10px;
+        padding-bottom: 30px;
         font-size: 1em;
     }
 
