@@ -64,7 +64,7 @@ button {
 }
 
 .info.ease {
-    background-image: linear-gradient(to top, #9be15d 0%, #00e3ae 100%);
+    background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
 }
 
 .info.time {
@@ -268,6 +268,7 @@ button {
         width: 150px;
         margin: 1%;
         padding: 20px;
+        font-size: 1em;
     }
 
     .catvalkw {
@@ -281,12 +282,14 @@ button {
     }
 
     .infosummary, .infohead {
+        width: 94%;
         max-width: 100%;
         margin: 1%;
     }
 
-    
-
-
+    .infoout, .infourl {
+        width: 94%;
+        max-width: 100%;
+    }
 
 }
