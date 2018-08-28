@@ -27,7 +27,7 @@ def entry():
     {"outbound_links": ['UNABLE TO GET URL']},    #Index 3
     {"summary": "UNABLE TO GET URL"}  #Index 4
     ]
-    
+
     # Getting link from request
     page_url = request.args.get("link")
 
@@ -36,7 +36,7 @@ def entry():
 
     # Requesting content from URL
     page_content = link_init.content()
-    
+
     if page_content != "UNABLE TO GET URL":
         loaded_text = Text_Anna(page_content["text"])
 
@@ -65,4 +65,4 @@ def bad_request(error):
     return make_response(jsonify({"error": "Invalid Request"}, 400))
 if __name__ == '__main__':
     CORS(app)
-    app.run()
+    app.run("127.0.0.1", port=8080)

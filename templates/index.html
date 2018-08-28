@@ -13,78 +13,83 @@
         <meta charset="utf-8">
         <title>Webpage Analytics | PageHawk.io</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	    <!-- <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> -->
     </head>
     <body>
-        <nav>
-            <ul class="navlist">
-                <a href="/" class="navitem">Home</a>
-                <a href="/about" class="navitem">About</a>
-            </ul>
-        </nav>
-        <div class="searchouter">
-            <h1 class="logo">PageHawk.io</h1>
-            <p class="tagline">Webpage content analytics</p>
-            <div class="searchinputs">
-                <input class="searchbar" type="text" placeholder="Paste URL Here" data-bind="textInput: url, click: cleanbar">
-                <button class="submitbt" type="submit" name="button" data-bind="click: analyze, visible: showana">Analyze</button>
-                <button class="loading" data-bind="visible: loading">Analyzing...</button>
+        <header>
+            <div class="logo_desc">
+                <h1>PageHawk</h1>
+                <p class="subdesc">Content Analytics</p>
             </div>
-            <div class="rcontainer">
-                <div class="info btop">
-                    <p class="catval" data-bind="text: word_count"></p>
-                    <p class="catname">Word Count</p>
+            <a href="/about" class="navitem">About</a>
+        </header>
+
+            <div class="wrapper">
+                <div class="searchinputs">
+                    <input class="searchbar" type="text" placeholder="Paste URL Here" data-bind="textInput: url, click: cleanbar">
+                    <button class="submitbt" type="submit" name="button" data-bind="click: analyze, visible: showana">Analyze</button>
+                    <button class="loading" data-bind="visible: loading">Analyzing...</button>
                 </div>
-                <div class="info btop">
-                    <p class="catval" data-bind="text: sent_count"></p>
-                    <p class="catname">Sentence Count</p>
+                <div class="content_common_measure">
+                    <div class="info word">
+                        <p class="catname">Word Count</p>
+                        <!-- <p class="catval" data-bind="text: word_count"></p> -->
+                    </div>
+                    <div class="info sent">
+                        <p class="catname">Sentence Count</p>
+                        <!-- <p class="catval" data-bind="text: sent_count"></p> -->
+                    </div>
+                    <div class="info ease">
+                        <p class="catname">Reading Ease</p>
+                        <!-- <p class="catval" data-bind="text: read_ease"></p> -->
+                    </div>
+                    <div class="info time">
+                        <p class="catname">Read Time</p>
+                        <!-- <p class="catval" data-bind="text: read_time"></p> -->
+                    </div>
+                    <div class="info res">
+                        <p class="catname">Response Time</p>
+                        <!-- <p class="catval" data-bind="text: load_time"></p> -->
+                    </div>
                 </div>
-                <div class="info btop">
-                    <p class="catval" data-bind="text: read_ease"></p>
-                    <p class="catname">Reading Ease</p>
-                </div>
-                <div class="info btop">
-                    <p class="catval" data-bind="text: read_time"></p>
-                    <p class="catname">Read Time</p>
-                </div>
-                <div class="info btop">
-                    <p class="catval" data-bind="text: load_time"></p>
-                    <p class="catname">Response Time</p>
-                </div>
-                <div class="info scrll">
+                <div class="infokw">
                     <ol class="catvalkw" data-bind="foreach: keywords">
                         <li data-bind="text: word"></li>
+
                     </ol>
-                    <p class="catname">Keyword Density (Greatest to Least)</p>
+                    <p class="catname" style="margin-top: 1.5%;">Keyword Density (Greatest to Least)</p>
                 </div>
+
+
                 <div class="sideby">
-                 <div class="info scrll">
-                    <p class="catname">Summary</p>
-                    <p class="catval" data-bind="text: summary"></p>
+                     <div class="infosummary">
+                        <p class="catname">Summary</p>
+                        <p class="catval summary" data-bind="text: summary"></p>
+                    </div>
+                    <div class="infohead">
+                        <p class="catname">Headings</p>
+                        <ul class="headingl" data-bind="foreach: headings">
+                            <li class="headitem" data-bind="text: heading"></li>
+                            <br>
+                        </ul>
+                    </div>
                 </div>
-                <div class="info scrll">
-                    <p class="catname">Headings</p>
-                    <ul class="headingl" data-bind="foreach: headings">
-                        <li class="headitem" data-bind="text: heading"></li>
-                        <br>
-                    </ul>
-                </div>
-                </div>
-                <div class="info scrll">
-                    <p class="catname">URL:   <a href="" data-bind="text: checklink, attr: {href: checklink}"></a></p>
-                </div>
-                <div class="info scrll scrollneeded">
-                    <p class="catname">Outbound Links</p>
-                    <ul class="linklist" data-bind="foreach: olinks">
-                        <a href="" data-bind="text: link, attr: {href: link}"></a>
-                        <br>
-                    </ul>
+
+                <div class="sideby">
+                    <div class="infoout">
+                        <p class="catname">Outbound Links</p>
+                        <ul class="linklist" data-bind="foreach: olinks">
+                            <a href="" data-bind="text: link, attr: {href: link}"></a>
+                            <br>
+                        </ul>
+                    </div>
+                    <div class="infourl">
+                        <p class="catname">URL:   <a href="" data-bind="text: checklink, attr: {href: checklink}"></a></p>
+                    </div>
                 </div>
             </div>
-        </div>
     </body>
     <script type='text/javascript' src="{{ url_for('static', filename='js/knockout-3.4.2.js') }}"></script>
     <script type='text/javascript' src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
