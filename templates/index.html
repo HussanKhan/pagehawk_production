@@ -69,7 +69,7 @@
                     </div>
                     <div class="infohead">
                         <p class="catname" style="font-size: 1.1em;">Headings</p>
-                        <ul style="list-style: none; padding-left: 0px;" class="headingl" data-bind="foreach: headings">
+                        <ul style="list-style: none; padding-left: 0px; font-weight: 800;" class="headingl" data-bind="foreach: headings">
                             <li class="headitem" data-bind="text: heading"></li>
                             <br>
                         </ul>
@@ -79,7 +79,7 @@
                 <div class="sideby">
                     <div class="infoout">
                         <p class="catname">Outbound Links</p>
-                        <ul class="linklist" data-bind="foreach: olinks">
+                        <ul class="linklist" style="padding-left: 0px;" data-bind="foreach: olinks">
                             <a href="" data-bind="text: link, attr: {href: link}"></a>
                             <br>
                         </ul>
