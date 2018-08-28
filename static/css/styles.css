@@ -198,6 +198,7 @@ button {
     padding: 10px;
     margin-left: 0px;
     max-height: 301px;
+    overflow-y: auto;
     transition: all 0.3s;
 }
 
@@ -218,6 +219,7 @@ button {
     padding: 10px;
     margin-right: 0px;
     max-height: 301px;
+    overflow-y: auto;
     transition: all 0.3s;
 }
 
