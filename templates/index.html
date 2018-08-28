@@ -29,8 +29,7 @@
             <div class="wrapper">
                 <div class="searchinputs">
                     <input class="searchbar" type="text" placeholder="Paste URL Here" data-bind="textInput: url, click: cleanbar">
-                    <button class="submitbt" type="submit" name="button" data-bind="click: analyze, visible: showana">Analyze</button>
-                    <button class="loading" data-bind="visible: loading">Analyzing...</button>
+                    <button class="submitbt" type="submit" name="button" data-bind="click: analyze">Analyze</button>
                 </div>
                 <div class="content_common_measure">
                     <div class="info word">
@@ -65,12 +64,12 @@
 
                 <div class="sideby">
                      <div class="infosummary">
-                        <p class="catname">Summary</p>
+                        <p class="catname" style="font-size: 1.1em;">Summary</p>
                         <p class="catval summary" data-bind="text: summary"></p>
                     </div>
                     <div class="infohead">
-                        <p class="catname">Headings</p>
-                        <ul style="list-style: none;" class="headingl" data-bind="foreach: headings">
+                        <p class="catname" style="font-size: 1.1em;">Headings</p>
+                        <ul style="list-style: none; padding-left: 0px;" class="headingl" data-bind="foreach: headings">
                             <li class="headitem" data-bind="text: heading"></li>
                             <br>
                         </ul>
