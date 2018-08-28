@@ -321,4 +321,10 @@ button {
 
     }
 
+    .infourl:hover {
+        margin-top: 4%;
+        box-shadow: 0px 20px 25px 1px rgba(0, 0, 0, 0);
+
+    }
+
 }
