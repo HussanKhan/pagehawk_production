@@ -15,7 +15,7 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <!-- <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> -->
+	    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     </head>
     <body>
         <header>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="info ease">
                         <p class="catname">Reading Ease</p>
-                        <p class="catval" data-bind="text: read_ease"></p>
+                        <p class="catval" style="margin-top: 0px;" data-bind="text: read_ease"></p>
                     </div>
                     <div class="info time">
                         <p class="catname">Read Time</p>
